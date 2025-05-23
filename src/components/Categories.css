@@ -1,0 +1,38 @@
+.categories {
+  display: flex;
+  overflow-x: auto; /* 스크롤 가능하도록 수정 */
+  padding: 30px;
+  gap: 32px;
+  cursor: grab;
+  white-space: nowrap; /* 항목이 줄바꿈되지 않도록 설정 */
+  margin-bottom: 150px;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.category {
+  flex: 0 0 auto; /* 고정 너비로 설정 */
+  width: 250px;
+  height: 300px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-box {
+  width: 100%;
+  height: 180px;
+  background: #ddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.category p {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 10px;
+}

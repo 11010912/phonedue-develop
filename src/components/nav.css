@@ -1,0 +1,66 @@
+.Navigation {
+    width: 100%;
+}
+
+.custom-navbar {
+    background-color: white !important;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 왼쪽 로고 영역 */
+.logo-section {
+    width: 180px;
+}
+
+/* 검색창 */
+.search-form .form-control {
+    max-width: 180px;
+}
+
+/* 고객지원, 로그인 버튼 */
+.support-btn {
+    font-weight: 800;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.support-btn:hover {
+    color: #007bff;
+}
+
+/* 첫 번째 줄 버튼 + 검색창 간격 */
+.top-row {
+    gap: 15px; /* 버튼들과 검색창 사이 간격 */
+}
+
+/* 메뉴 */
+.nav-menu {
+    display: flex;
+    gap: 13rem;
+    font-weight: 800;
+}
+
+.nav-menu .nav-link {
+    color: #333 !important;
+}
+
+.nav-menu .nav-link:hover {
+    color: #007bff !important;
+}
+
+.btn-search {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.btn-search img {
+  display: block;
+}
+.btn-search:hover img {
+  filter: brightness(0.8);
+}
