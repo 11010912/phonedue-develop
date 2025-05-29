@@ -1,69 +1,54 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { smartphoneData } from '../data/smartphonesData';
 import './SmartphonesPage.css';
 
-const SmartphoneSection = ({ title, images }) => {
-  const scrollRef = useRef(null);
-  const [isDrag, setIsDrag] = useState(false);
-  const [startX, setStartX] = useState(0);
-
-  const onDragStart = (e) => {
-    if (!scrollRef.current) return;
-    setIsDrag(true);
-    setStartX(e.pageX + scrollRef.current.scrollLeft);
-  };
-
-  const onDragMove = (e) => {
-    if (!isDrag || !scrollRef.current) return;
-    scrollRef.current.scrollLeft = startX - e.pageX;
-  };
-
-  const onDragEnd = () => {
-    setIsDrag(false);
-  };
-
+const SmartphoneBox = ({ title, products }) => {
+  const navigate = useNavigate();
   return (
-    <section className="phone-section">
+    <section className="smartphone-box">
       <h2 className="section-title">{title}</h2>
-      <div
-        className="phone-scroll-container"
-        ref={scrollRef}
-        onMouseDown={onDragStart}
-        onMouseMove={onDragMove}
-        onMouseUp={onDragEnd}
-        onMouseLeave={onDragEnd}
-      >
-        {images.map((src, index) => (
-          <div className="phone-item" key={index}>
-            <img src={src} alt={`${title} ${index + 1}`} />
-          </div>
-        ))}
+      <div className="category-border-box">
+        <div className="product-grid">
+          {products.map((product) => (
+            <div
+              className="product-card"
+              key={product.id}
+              onClick={() => navigate(`/product/${product.id}`)}
+            >
+              <img src={product.image} alt={product.name} />
+              <div className="product-info">
+                <div className="product-name">{product.name}</div>
+                <div className="original-price">{product.originalPrice}</div>
+                <div className="sale-price">{product.salePrice}</div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
 const SmartphonesPage = () => {
+  const apple = smartphoneData.filter(p => p.brand === 'Apple');
+  const samsung = smartphoneData.filter(p => p.brand === '삼성');
+  const pixel = smartphoneData.filter(p => p.brand === 'Pixel');
+
   return (
     <div className="SmartphonesPage">
-      <div className="smartphone-sections">
-        <SmartphoneSection
-          title="Apple"
-          images={Array.from({ length: 10 }, (_, i) => `/phone1-${i + 1}.png`)}
-        />
-        <SmartphoneSection
-          title="삼성"
-          images={Array.from({ length: 10 }, (_, i) => `/phone2-${i + 1}.png`)}
-        />
-        <SmartphoneSection
-          title="Pixel"
-          images={Array.from({ length: 10 }, (_, i) => `/phone3-${i + 1}.png`)}
-        />
+      <SmartphoneBox title="Apple" products={apple} />
+      <SmartphoneBox title="삼성" products={samsung} />
+      <SmartphoneBox title="Pixel" products={pixel} />
+      <div className="more-button-container">
+        <button className="more-button">더 많은 상품 보러가기</button>
       </div>
     </div>
   );
 };
 
 export default SmartphonesPage;
+
 
 
 

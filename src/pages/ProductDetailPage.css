@@ -1,0 +1,75 @@
+.product-detail-container {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.product-left {
+  flex: 6.5;
+  position: relative;
+}
+
+.white-box {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 70px 30px 30px 30px; /* 위쪽 공간 확보 */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.product-title {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.price {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.large-image {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.product-right {
+  flex: 3.5;
+}
+
+.scrollable-info {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+
+.scrollable-info h3 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.scrollable-info select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.buy-button {
+  width: 100%;
+  padding: 14px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
