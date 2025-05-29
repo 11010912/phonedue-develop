@@ -12,9 +12,9 @@ const ProductDetailPage = () => {
   return (
     <div className="product-detail-container">
       <div className="product-left">
+        <div className="product-title">{product.name}</div>
+        <div className="price">{product.salePrice} (정가 {product.originalPrice})</div>
         <div className="white-box">
-          <div className="product-title">{product.name}</div>
-          <div className="price">{product.salePrice} (정가 {product.originalPrice})</div>
           <img src={product.image} alt={product.name} className="large-image" />
         </div>
       </div>
@@ -38,6 +38,7 @@ const ProductDetailPage = () => {
           </select>
 
           <button className="buy-button">구매하기</button>
+          <button className="cart-button">장바구니 담기</button>
         </div>
       </div>
     </div>
