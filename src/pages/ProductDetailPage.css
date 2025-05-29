@@ -12,15 +12,16 @@
 .white-box {
   box-sizing: border-box;
   background-color: white;
-  padding: 70px 30px 30px 30px; /* 위쪽 공간 확보 */
+  padding: 30px 30px 30px 30px; /* 위쪽 공간 확보 */
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   position: relative;
+  margin-top: 75px;
 }
 
 .product-title {
   position: absolute;
-  top: 3px;
+  top: 0.5px;
   left: 20px;
   font-size: 20px;
   font-weight: bold;
@@ -29,7 +30,7 @@
 
 .price {
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 20px;
   font-size: 18px;
   z-index: 2;
@@ -72,4 +73,16 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.cart-button {
+  width: 100%;
+  padding: 14px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
 }
