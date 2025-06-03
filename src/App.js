@@ -9,6 +9,7 @@ import SmartphonesPage from './pages/SmartphonesPage';
 import TabletsPage from './pages/TabletsPage';
 import AccessoriesPage from './pages/AccessoriesPage';
 import ProductDetailPage from './pages/ProductDetailPage';
+import CartPage from './pages/CartPage'; // ✅ 장바구니 페이지 import 추가
 
 function App() {
   return (
@@ -54,12 +55,21 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/cart" // ✅ 장바구니 라우팅 추가
+          element={
+            <Layout>
+              <CartPage />
+            </Layout>
+          }
+        />
       </Routes>
     </Router>
   );
 }
 
 export default App;
+
 
 
 

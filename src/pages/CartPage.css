@@ -1,0 +1,59 @@
+.cart-page {
+  padding: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.cart-item-image {
+  width: 100px;
+  height: auto;
+  margin-right: 16px;
+  object-fit: contain;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.item-checkbox {
+  margin-right: 16px;
+  transform: scale(1.2);
+}
+
+.delete-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.empty-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh; /* 화면 높이의 대부분 */
+  font-size: 2rem;
+  font-weight: bold;
+  color: #666;
+  text-align: center;
+}

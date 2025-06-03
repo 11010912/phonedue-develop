@@ -47,9 +47,9 @@ const AccessoriesPage = () => {
 
   return (
     <div className="SmartphonesPage">
-      <AccessoriesBox title="Apple" products={appleProducts} />
+      <AccessoriesBox title="애플" products={appleProducts} />
       <AccessoriesBox title="삼성" products={samsungProducts} />
-      <AccessoriesBox title="Pixel" products={pixelProducts} />
+      <AccessoriesBox title="픽셀" products={pixelProducts} />
       <div className="more-button-container">
         <button className="more-button">더 많은 상품 보러가기</button>
       </div>

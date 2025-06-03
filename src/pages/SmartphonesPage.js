@@ -37,9 +37,9 @@ const SmartphonesPage = () => {
 
   return (
     <div className="SmartphonesPage">
-      <SmartphoneBox title="Apple" products={apple} />
+      <SmartphoneBox title="애플" products={apple} />
       <SmartphoneBox title="삼성" products={samsung} />
-      <SmartphoneBox title="Pixel" products={pixel} />
+      <SmartphoneBox title="픽셀" products={pixel} />
       <div className="more-button-container">
         <button className="more-button">더 많은 상품 보러가기</button>
       </div>
@@ -48,9 +48,3 @@ const SmartphonesPage = () => {
 };
 
 export default SmartphonesPage;
-
-
-
-
-
-

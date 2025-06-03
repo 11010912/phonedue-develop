@@ -1,88 +1,109 @@
 .product-detail-container {
   display: flex;
-  padding: 40px;
   gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-left {
   flex: 6.5;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.white-box {
-  box-sizing: border-box;
-  background-color: white;
-  padding: 30px 30px 30px 30px; /* 위쪽 공간 확보 */
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  position: relative;
-  margin-top: 75px;
+.product-left-info {
+  margin-bottom: 20px;
 }
 
-.product-title {
-  position: absolute;
-  top: 0.5px;
-  left: 20px;
+.product-left-info h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.product-left-info .price {
   font-size: 20px;
-  font-weight: bold;
-  z-index: 2;
+  color: #333;
 }
 
-.price {
-  position: absolute;
-  top: 35px;
-  left: 20px;
-  font-size: 18px;
-  z-index: 2;
+.product-left-info .sale {
+  color: #e53935;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.product-left-info .original {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.product-image-box {
+  display: flex;
+  justify-content: center;
 }
 
 .large-image {
   width: 100%;
-  border-radius: 12px;
+  max-width: 400px;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
 .product-right {
   flex: 3.5;
-}
-
-.scrollable-info {
-  max-height: 600px;
+  background-color: #f9f9f9;
+  padding: 24px;
+  border-radius: 12px;
   overflow-y: auto;
-  padding-right: 12px;
+  max-height: 600px;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.05);
 }
 
 .scrollable-info h3 {
-  margin-top: 24px;
-  margin-bottom: 8px;
+  margin: 16px 0 8px;
   font-size: 16px;
+  color: #333;
 }
 
-.scrollable-info select {
+.scrollable-info select,
+.scrollable-info input {
   width: 100%;
   padding: 8px;
-  margin-bottom: 24px;
-  font-size: 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
 
+.cart-button,
 .buy-button {
   width: 100%;
-  padding: 14px;
-  background-color: black;
-  color: white;
+  padding: 12px;
   font-size: 16px;
+  margin-top: 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .cart-button {
-  width: 100%;
-  padding: 14px;
-  background-color: black;
+  background-color: #4caf50;
   color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-top: 10px;
+}
+
+.cart-button:hover {
+  background-color: #43a047;
+}
+
+.buy-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.buy-button:hover {
+  background-color: #1976d2;
 }
